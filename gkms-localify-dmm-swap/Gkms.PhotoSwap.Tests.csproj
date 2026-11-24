@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="Gkms.PhotoSwap.csproj" />
-    <PackageReference Include="Gkms.Sdk" Version="[2.0.0]" />
+    <PackageReference Include="Gkms.Sdk" Version="[2.0.4]" />
     <Compile Include="PhotoSwap.Tests.cs;PhotoEditor.Tests.cs" />
   </ItemGroup>
 </Project>

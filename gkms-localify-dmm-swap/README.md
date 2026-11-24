@@ -2,7 +2,7 @@
 
 学园偶像大师 DMM/PC 版的 RE API 2 插件。照片扫描、文件选择、图像适配、前后预览、替换和备份还原全部位于游戏内插件配置页，不需要 Python、Pillow 或单独打开 gkms-photo-swap。
 
-插件 ID：`pm.photoswap`。作者：`pm`。入口程序集：`Gkms.PhotoSwap.dll`。SDK：`Gkms.Sdk 2.0.0`。
+插件 ID：`pm.photoswap`。作者：`pm`。入口程序集：`Gkms.PhotoSwap.dll`。SDK：`Gkms.Sdk 2.0.4`。
 
 ## 安装与使用
 
