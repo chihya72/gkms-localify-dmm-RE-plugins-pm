@@ -18,7 +18,7 @@
         "Neural Rendering",
         "实验性"
       ],
-      "repositoryUrl": "https://github.com/chihya72/gkms-dlss5",
+      "repositoryUrl": "https://github.com/chihya72/gkms-localify-dmm-RE-plugins-pm/tree/main/gkms-dlss5",
       "names": null,
       "requiresRestart": true,
       "hasSettingsUi": true,
@@ -40,7 +40,7 @@
         "照片替换",
         "swap"
       ],
-      "repositoryUrl": "https://github.com/chihya72/gkms-localify-dmm-swap",
+      "repositoryUrl": "https://github.com/chihya72/gkms-localify-dmm-RE-plugins-pm/tree/main/gkms-localify-dmm-swap",
       "names": null,
       "requiresRestart": false,
       "hasSettingsUi": true,

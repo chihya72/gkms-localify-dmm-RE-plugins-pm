@@ -1,4 +1,2 @@
-# Independent local Git repositories; the outer repository publishes packages/indexes.
-/gkms-dlss5/
-/gkms-localify-dmm-swap/
+# Build output only; plugin source folders are included in this repository.
 /out/

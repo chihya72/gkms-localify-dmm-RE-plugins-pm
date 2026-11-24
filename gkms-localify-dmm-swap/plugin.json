@@ -1,0 +1,23 @@
+{
+  "id": "pm.photoswap",
+  "name": "照片替换支持",
+  "author": "pm",
+  "repositoryUrl": "https://github.com/chihya72/gkms-localify-dmm-RE-plugins-pm/tree/main/gkms-localify-dmm-swap",
+  "version": "1.1.2",
+  "apiVersion": 2,
+  "assembly": "Gkms.PhotoSwap.dll",
+  "entryPoint": "Gkms.Plugins.PhotoSwap.Plugin",
+  "settingsUi": "Gkms.Plugins.PhotoSwap.PhotoSettingsUi",
+  "description": "在插件内扫描拍摄缓存、选择图片、预览替换效果、备份和还原。替换完成后返回游戏保存照片。",
+  "punchline": "直接在游戏内换图，无需 Python 或外部工具。",
+  "category": "摄影与镜头",
+  "tags": ["摄影", "照片替换", "swap"],
+  "settings": [
+    {
+      "key": "cacheRoot",
+      "label": "照片缓存根目录（留空使用默认目录）",
+      "type": "string",
+      "default": ""
+    }
+  ]
+}

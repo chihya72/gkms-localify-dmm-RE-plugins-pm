@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="Gkms.PhotoSwap.csproj" />
+    <PackageReference Include="Gkms.Sdk" Version="[2.0.0]" />
+    <Compile Include="PhotoSwap.Tests.cs;PhotoEditor.Tests.cs" />
+  </ItemGroup>
+</Project>

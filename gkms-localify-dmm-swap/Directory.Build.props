@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)build\re\bin\$(MSBuildProjectName)\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)build\re\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <RestorePackagesPath>$(MSBuildThisFileDirectory)build\re\packages</RestorePackagesPath>
+    <SdkFeed Condition="'$(SdkFeed)' == ''">$(MSBuildThisFileDirectory)..\..\gkms-localify-dmm-RE\out\sdk</SdkFeed>
+    <RestoreAdditionalProjectSources>$(SdkFeed);$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
+  </PropertyGroup>
+</Project>

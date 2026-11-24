@@ -1,11 +1,11 @@
 # pm 个人插件仓库
 
-本仓库是 RE 兼容的 pm 个人插件订阅源，管理订阅索引、发布脚本和版本化 ZIP。两个插件的源码分别位于独立仓库，均使用 `main`：
+本仓库是 RE 兼容的 pm 个人插件订阅源，在一个 GitHub 仓库中管理两个插件的源码、订阅索引、发布脚本和版本化 ZIP：
 
-- [DLSS5 源码](https://github.com/chihya72/gkms-dlss5)，本地目录 `gkms-dlss5`。
-- [照片替换支持源码](https://github.com/chihya72/gkms-localify-dmm-swap)，本地目录 `gkms-localify-dmm-swap`。
+- [DLSS5 源码](gkms-dlss5)，目录 `gkms-dlss5`。
+- [照片替换支持源码](gkms-localify-dmm-swap)，目录 `gkms-localify-dmm-swap`。
 
-开发时将两个源码仓库放在本仓库对应的子目录；外层 `.gitignore` 排除子仓库源码，提交与推送需分别进行。仅订阅安装插件无需下载源码。
+克隆本仓库即可取得两个插件的完整源码，无需另外克隆源码库或初始化子模块。两个子目录是普通文件夹，各自包含项目文件、构建脚本和许可证，可以独立编译；整个项目只有外层一个 Git 仓库。仅订阅安装插件无需下载源码。
 
 插件源码仓库包含 RE 插件源码、构建与离线测试及许可证，不包含旧 DMM 注入器、缓存、截图、模型或第三方 NR 运行库。
 
@@ -21,9 +21,18 @@ https://raw.githubusercontent.com/chihya72/gkms-localify-dmm-RE-plugins-pm/main/
 
 在 PowerShell 7 中执行 `Build-Repository.ps1 -Test`。SDK 默认从同级 RE 仓库的 `out\sdk` 读取，也可通过 `-SdkFeed` 指定。它独立构建两个插件、运行测试，再更新外层 `packages`、`index.json` 和 `pluginmaster.json`。不启动游戏，不安装插件，不执行 Git 提交或推送。
 
+也可以在克隆后的仓库根目录分别编译，两个插件互不依赖：
+
+```powershell
+& .\gkms-dlss5\Build.ps1 -SdkFeed 'D:\PluginWork\sdk-feed'
+& .\gkms-localify-dmm-swap\Build.ps1 -SdkFeed 'D:\PluginWork\sdk-feed'
+```
+
+将示例 `SdkFeed` 替换为存放 RE 的 `Gkms.Sdk.2.0.4.nupkg` 的目录。需要 Windows x64、PowerShell 7、.NET SDK 8+；DLSS5 还需要 Visual Studio C++ x64 工具和 Windows SDK。编译无需游戏、模型文件或另一个插件的构建产物。
+
 运行 `Serve-Repository.ps1` 后，在 RE 插件库添加订阅 `http://localhost:18765/index.json`，或兼容格式的 `http://localhost:18765/pluginmaster.json`。服务只监听本机，关闭脚本后订阅地址不可访问。框架不接受本地文件路径作为在线订阅地址。
 
-在线索引指向根目录；下载路径是相对的 `packages/<程序集>-<版本>.zip`。发布时分别提交并推送插件源码，再提交并推送外层的索引与对应安装包。外层提交不包含子仓库源码，也不修改 RE 框架 Release。
+在线索引指向根目录；下载路径是相对的 `packages/<程序集>-<版本>.zip`。发布时在本仓库一并提交并推送插件源码、索引与对应安装包，不修改 RE 框架 Release。
 
 ## 修改插件资料
 
