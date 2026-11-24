@@ -1,0 +1,4 @@
+# Independent local Git repositories; the outer repository publishes packages/indexes.
+/gkms-dlss5/
+/gkms-localify-dmm-swap/
+/out/

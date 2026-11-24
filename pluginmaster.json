@@ -1,0 +1,48 @@
+[
+  {
+    "InternalName": "pm.dlss5",
+    "Name": "DLSS 5 神经渲染（实验版）",
+    "AssemblyVersion": "0.3.0-alpha.2",
+    "GkmsApiLevel": 2,
+    "Author": "pm",
+    "Description": "DX11 学马的实验性 NR。接入 OptiScaler/RenoDX 色彩管线，支持 25–200% 模型尺寸、四种缩小滤镜、同帧深度、冻结调参、并排／擦除对比和调试视图。实机效果仍需验证；尚未接入游戏实时曝光扫描与多点校准。",
+    "DownloadLinkInstall": "packages/Gkms.Dlss5-0.3.0-alpha.2.zip",
+    "DownloadLinkUpdate": "packages/Gkms.Dlss5-0.3.0-alpha.2.zip",
+    "Assembly": "Gkms.Dlss5.dll",
+    "Punchline": "DX11 游戏接入，独立模型处理",
+    "Category": "画面与窗口",
+    "Tags": [
+      "DLSS5",
+      "Neural Rendering",
+      "实验性"
+    ],
+    "RepoUrl": "https://github.com/chihya72/gkms-dlss5",
+    "Names": null,
+    "RequiresRestart": true,
+    "HasSettingsUi": true,
+    "HasResourceUpdater": false
+  },
+  {
+    "InternalName": "pm.photoswap",
+    "Name": "照片替换支持",
+    "AssemblyVersion": "1.1.2",
+    "GkmsApiLevel": 2,
+    "Author": "pm",
+    "Description": "在插件内扫描拍摄缓存、选择图片、预览替换效果、备份和还原。替换完成后返回游戏保存照片。",
+    "DownloadLinkInstall": "packages/Gkms.PhotoSwap-1.1.2.zip",
+    "DownloadLinkUpdate": "packages/Gkms.PhotoSwap-1.1.2.zip",
+    "Assembly": "Gkms.PhotoSwap.dll",
+    "Punchline": "直接在游戏内换图，无需 Python 或外部工具。",
+    "Category": "摄影与镜头",
+    "Tags": [
+      "摄影",
+      "照片替换",
+      "swap"
+    ],
+    "RepoUrl": "https://github.com/chihya72/gkms-localify-dmm-swap",
+    "Names": null,
+    "RequiresRestart": false,
+    "HasSettingsUi": true,
+    "HasResourceUpdater": false
+  }
+]
